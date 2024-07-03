@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore  = 0;
+
 function getComputerChoice() {
     console.log(Math.random());
 }
@@ -11,3 +12,7 @@ function getHumanChoice() {
 }
 
 getHumanChoice();
+
+function playRound(humanChoice, computerChoice) {
+    
+}
