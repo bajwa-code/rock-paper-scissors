@@ -1,18 +1,19 @@
-let humanScore = 0;
-let computerScore  = 0;
-
 function getComputerChoice() {
-    console.log(Math.random());
+    const computerChoice = ['Rock', 'Paper', 'Scissors'];
+    let randomIndex = Math.floor(Math.random()*computerChoice.length);
+    console.log(computerChoice[randomIndex]);
+    return computerChoice[randomIndex];
 }
 
 getComputerChoice();
 
 function getHumanChoice() {
-    console.log(prompt());
+    const userChose = prompt('Enter rock, paper, or scissors:'). toLowerCase();
+    console.log(userChose);
+    return userChose;
 }
 
 getHumanChoice();
 
-function playRound(humanChoice, computerChoice) {
-    
-}
+const humanScore = 0;
+const computerScore  = 0;
