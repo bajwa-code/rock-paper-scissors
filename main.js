@@ -21,3 +21,6 @@ function getHumanChoice(){
 }
 
 getHumanChoice();
+
+humanScore = 0;
+computerScore = 0;
