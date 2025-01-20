@@ -31,6 +31,7 @@ function playGame() {
         
         if (humanChoice === computerChoice) {
             console.log(`It's a tie!`);
+            return;
         }
     
         if (
