@@ -15,7 +15,6 @@ function getHumanChoice(){
         console.log("Invalid choice. Please choose 'rock', 'paper', or 'scissors'.")
         choice = prompt("Enter your choice (rock, paper, or scissors): ").toLowerCase();
     }
-    console.log(`You chose: ${choice}`);
     return choice;
     }
 
