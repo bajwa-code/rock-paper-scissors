@@ -52,7 +52,6 @@ function playGame() {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
-        console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
     }
 
     if (humanScore === 5) {
@@ -61,6 +60,7 @@ function playGame() {
         console.log("Computer wins the game! Better luck next time.");
     }
     
+    console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
 }
 
 playGame();
