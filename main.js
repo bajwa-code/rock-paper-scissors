@@ -25,6 +25,7 @@ function getHumanChoice(){
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    let roundCount = 0;
 
     function playRound(humanChoice, computerChoice) {
         console.log(`Computer chose: ${computerChoice}`);
@@ -49,6 +50,9 @@ function playGame() {
     }
 
     while (humanScore < 5 && computerScore < 5) {
+        roundCount++;
+        console.log(`Round ${roundCount}`);
+
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
@@ -61,6 +65,7 @@ function playGame() {
     }
     
     console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
+    console.log(`Total Rounds Played: ${roundCount}`);
 }
 
 playGame();
