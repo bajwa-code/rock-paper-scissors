@@ -25,7 +25,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
     console.log(`Computer chose: ${computerChoice}`);
     
     if (humanChoice === computerChoice) {
