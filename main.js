@@ -20,36 +20,41 @@ function getHumanChoice(){
     }
 
 
-let humanScore = 0;
-let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-    console.log(`Computer chose: ${computerChoice}`);
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
+        console.log(`Computer chose: ${computerChoice}`);
+        
+        if (humanChoice === computerChoice) {
+            console.log(`It's a tie!`);
+            return "It's a tie!";
+        }
     
-    if (humanChoice === computerChoice) {
-        console.log(`It's a tie!`);
-        return "It's a tie!";
+        if (
+            (humanChoice === 'rock' && computerChoice === 'scissors') ||
+            (humanChoice === 'paper' && computerChoice === 'rock') ||
+            (humanChoice === 'scissors' && computerChoice === 'paper')
+        ) { 
+            humanScore++;
+            console.log("You win this round!");
+            return "You win this round!";
+    
+        } else {
+            computerScore++;
+            console.log("Computer wins this round!");
+            return "Computer wins this round!";
+        }
     }
 
-    if (
-        (humanChoice === 'rock' && computerChoice === 'scissors') ||
-        (humanChoice === 'paper' && computerChoice === 'rock') ||
-        (humanChoice === 'scissors' && computerChoice === 'paper')
-    ) { 
-        humanScore++;
-        console.log("You win this round!");
-        return "You win this round!";
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
 
-    } else {
-        computerScore++;
-        console.log("Computer wins this round!");
-        return "Computer wins this round!";
-    }
+    console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
 
-playRound(humanChoice, computerChoice);
-
-console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
