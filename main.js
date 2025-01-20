@@ -8,7 +8,6 @@ function getComputerChoice(){
         return 'scissors';
     }   
 }
-console.log(getComputerChoice());
 
 function getHumanChoice(){
     let choice = prompt("Enter your choice (rock, paper, or scissors): ").toLowerCase();
